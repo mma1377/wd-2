@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <metha charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <p id="uiMessage" style="color:red"></p>
+    <form action="#" method="POST" dir="rtl">
+        <div class="form-grid-container">
+            <div class="form-grid-gender">عنوان:</div>
+            <div class="form-grid-gender-options">
+                <select name="uiGender" class="gender-options">
+                    <option value="-1">عنوان خود را انتخاب کنید</option>
+                    <option value=1>آقا</option>
+                    <option value=2>خانوم</option>
+                    <option value=3>غیره</option>
+                </select>
+            </div>
+            <div class="form-grid-name">نام کاربر: </div>
+            <div class="form-grid-name-input"><input type="text" name="uiName" width="10" height="10" /></div>
+            <div class="form-grid-lastname">نام خانوادگی کاربر: </div>
+            <div class="form-grid-lastname-input"><input type="text" name="uiFamily" /></div>
+            <div class="form-grid-englishname">نام و نام خانوادگی انگلیسی کاربر: </div>
+            <div class="form-grid-englishname-input"><input type="text" name="uiEnglishName" dir="ltr" /></div>
+            <div class="form-grid-email">آدرس پست الکترونیکی کاربر: </div>
+            <div class="form-grid-email-input"> <input type="text" name="uiMail" dir="ltr" /></div>
+            <div class="form-grid-phone">شماره تلفن همراه: </div>
+            <div class="form-grid-phone-input"><input type="text" name="uiPhone" onkeypress="return isNumber(event)" dir="ltr" /></div>
+            <div class="form-grid-ssn">کد ملی: </div>
+            <div class="form-grid-ssn-input"><input type="text" name="uiSsn" dir="ltr" /></div>
+            <div class="form-grid-pass">رمز عبور: </div>
+            <div class="form-grid-pass-input"><input type="text" name="uiPass" dir="ltr" /></div>
+            <div class="form-grid-passr">تایید رمز عبور: </div>
+            <div class="form-grid-passr-input"><input type="text" name="uiPassr" dir="ltr" /></div>
+            <div class="form-grid-address"> آدرس: </div>
+            <div class="form-grid-address-input"><input type="text" name="uiAddress" /></div>
+            <div class="form-grid-birthdate">تاریخ تولد: </div>
+            <div class="form-grid-birthdate-input"><input type="text" name="uiBirthdate" dir="ltr" /></div>
+            <div class="form-grid-marital">وضعیت تاهل:</div>
+            <div class="form-grid-marital-option1">
+                <input type="radio" name="uiMaritalStatus" value=1> متاهل </input>
+            </div>
+            <div class="form-grid-marital-option2">
+                <input type="radio" name="uiMaritalStatus" value=2> مجرد </input>
+            </div>
+            <div class="form-grid-fav">انتخاب علاقه‌مندی‌ها: </div>
+            <div class="form-grid-fav-option1">
+                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                <label for="vehicle1">  هوش مصنوعی</label>
+            </div>
+            <div class="form-grid-fav-option2">
+                <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                <label for="vehicle2">  طراحی الگوریتم</label>
+            </div>
+            <div class="form-grid-fav-option3">
+                <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                <label for="vehicle3">  شبکه</label>
+            </div>
+
+                <div class="form-grid-submit"><input type="submit" name="uiSubmit" onclick="return formValidation()" value="ارسال" /></div>
+            </div>
+</form>
+</body>
+</html>

@@ -1,0 +1,229 @@
+.form-grid-container {
+    display: grid;
+    grid-template-areas: 
+        'gender gender-op gender-op'
+        'name name-in name-in'
+        'lastname lastname-in lastname-in'
+        'englishname englishname-in englishname-in'
+        'email email-in email-in'
+        'phone phone-in phone-in'
+        'ssn ssn-in ssn-in'
+        'pass pass-in pass-in'
+        'passr passr-in passr-in'
+        'address address-in address-in'
+        'birthdate birthdate-in birthdate-in'
+        'marital marital-op1 marital-op2'
+        'fav fav fav'
+        'fav-op1 fav-op1 fav-op1'
+        'fav-op2 fav-op2 fav-op2'
+        'fav-op3 fav-op3 fav-op3'
+        'submit submit submit';
+    justify-content: center;
+    background-color: #2b095d;
+    color: white;
+    font-size: 30px;
+    padding: 40px;
+}
+
+@media (max-width: 768px) {
+
+    .form-grid-container {
+        display: grid;
+        grid-template-areas: 
+            'gender'
+            'gender-op'
+            'name'
+            'name-in'
+            'lastname'
+            'lastname-in'
+            'englishname'
+            'englishname-in'
+            'email'
+            'email-in'
+            'phone'
+            'phone-in'
+            'ssn'
+            'ssn-in'
+            'pass'
+            'pass-in'
+            'passr'
+            'passr-in'
+            'address'
+            'address-in'
+            'birthdate'
+            'birthdate-in'
+            'marital'
+            'marital-op1'
+            'marital-op2'
+            'fav'
+            'fav-op1'
+            'fav-op2'
+            'fav-op3'
+            'submit';
+    }
+}
+
+.form-grid-gender {
+    grid-area: gender;
+    display: flex;
+}
+
+.form-grid-gender-options {
+    grid-area: gender-op;
+    display: flex;
+}
+
+.form-grid-name {
+    grid-area: name;
+    display: flex;
+}
+
+.form-grid-name-input {
+    grid-area: name-in;
+    display: flex;
+}
+
+.form-grid-lastname {
+    grid-area: lastname;
+    display: flex;
+}
+
+.form-grid-lastname-input {
+    grid-area: lastname-in;
+    display: flex;
+}
+
+.form-grid-englishname {
+    grid-area: englishname;
+    display: flex;
+}
+
+.form-grid-englishname-input {
+    grid-area: englishname-in;
+    display: flex;
+}
+
+.form-grid-email {
+    grid-area: email;
+    display: flex;
+}
+
+.form-grid-email-input {
+    grid-area: email-in;
+    display: flex;
+}
+
+.form-grid-phone {
+    grid-area: phone;
+    display: flex;
+}
+
+.form-grid-phone-input {
+    grid-area: phone-in;
+    display: flex;
+}
+
+.form-grid-ssn {
+    grid-area: ssn;
+    display: flex;
+}
+
+.form-grid-ssn-input {
+    grid-area: ssn-in;
+    display: flex;
+}
+
+.form-grid-pass {
+    grid-area: pass;
+    display: flex;
+}
+
+.form-grid-pass-input {
+    grid-area: pass-in;
+    display: flex;
+}
+
+.form-grid-passr {
+    grid-area: passr;
+    display: flex;
+}
+
+.form-grid-passr-input {
+    grid-area: passr-in;
+    display: flex;
+}
+
+.form-grid-address {
+    grid-area: address;
+    display: flex;
+}
+
+.form-grid-address-input {
+    grid-area: address-in;
+    display: flex;
+}
+
+.form-grid-birthdate {
+    grid-area: birthdate;
+    display: flex;
+}
+
+.form-grid-birthdate-input {
+    grid-area: birthdate-in;
+    display: flex;
+}
+
+.form-grid-marital {
+    grid-area: marital;
+    display: flex;
+}
+
+.form-grid-marital-option1 {
+    grid-area: marital-op1;
+    display: flex;
+}
+
+.form-grid-marital-option2 {
+    grid-area: marital-op2;
+    display: flex;
+}
+
+.form-grid-fav {
+    grid-area: fav;
+    display: flex;
+}
+
+.form-grid-fav-option1 {
+    grid-area: fav-op1;
+    display: flex;
+}
+
+.form-grid-fav-option2 {
+    grid-area: fav-op2;
+    display: flex;
+}
+
+.form-grid-fav-option3 {
+    grid-area: fav-op3;
+    display: flex;
+}
+
+.form-grid-submit {
+    grid-area: submit;
+    display: flex;
+}
+
+.form-grid-gender, .form-grid-gender-options, .form-grid-name, .form-grid-name-input, .form-grid-lastname, .form-grid-lastname-input,
+.form-grid-englishname, .form-grid-englishname-input, .form-grid-email, .form-grid-email-input, .form-grid-phone, .form-grid-phone-input,
+.form-grid-ssn, .form-grid-ssn-input, .form-grid-pass, .form-grid-pass-input, .form-grid-passr, .form-grid-passr-input, .form-grid-address,
+.form-grid-address-input, .form-grid-birthdate, .form-grid-birthdate-input, .form-grid-marital, .form-grid-marital-option1,
+.form-grid-marital-option2, .form-grid-fav, .form-grid-fav-option1, .form-grid-fav-option2, .form-grid-fav-option3, .form-grid-submit {
+    padding: 10px 10px 10px 10px;
+    height: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.gender-options {
+    width: 180px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
