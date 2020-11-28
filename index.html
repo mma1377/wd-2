@@ -4,6 +4,7 @@
 <head>
     <metha charset="utf-8" />
     <link rel="stylesheet" href="style.css" />
+    <script src="formScript.js"></script>
 </head>
 <body>
     <p id="uiMessage" style="color:red"></p>
@@ -19,48 +20,48 @@
                 </select>
             </div>
             <div class="form-grid-name">نام کاربر: </div>
-            <div class="form-grid-name-input"><input type="text" name="uiName" width="10" height="10" /></div>
+            <div class="form-grid-name-input"><input type="text" name="uiName" width="10" height="10" maxlength="50" onkeypress="return nameCheck(event)" /></div>
             <div class="form-grid-lastname">نام خانوادگی کاربر: </div>
-            <div class="form-grid-lastname-input"><input type="text" name="uiFamily" /></div>
+            <div class="form-grid-lastname-input"><input type="text" name="uiLastName" maxlength="100" onkeypress="return lastNameCheck(event)" /></div>
             <div class="form-grid-englishname">نام و نام خانوادگی انگلیسی کاربر: </div>
-            <div class="form-grid-englishname-input"><input type="text" name="uiEnglishName" dir="ltr" /></div>
+            <div class="form-grid-englishname-input"><input type="text" name="uiEnglishName" maxlength="150" dir="ltr" onkeypress="return englishNameCheck(event)" /></div>
             <div class="form-grid-email">آدرس پست الکترونیکی کاربر: </div>
-            <div class="form-grid-email-input"> <input type="text" name="uiMail" dir="ltr" /></div>
+            <div class="form-grid-email-input"> <input type="text" name="uiMail" dir="ltr" onblur="mailBlur()" required /></div>
             <div class="form-grid-phone">شماره تلفن همراه: </div>
-            <div class="form-grid-phone-input"><input type="text" name="uiPhone" onkeypress="return isNumber(event)" dir="ltr" /></div>
+            <div class="form-grid-phone-input"><input type="text" name="uiPhone" onfocus="onPhoneNumChange()" oninput="onPhoneNumChange()" onkeypress="return phoneNumCheck(event)" dir="ltr" required /></div>
             <div class="form-grid-ssn">کد ملی: </div>
-            <div class="form-grid-ssn-input"><input type="text" name="uiSsn" dir="ltr" /></div>
+            <div class="form-grid-ssn-input"><input type="text" name="uiSsn" dir="ltr" oninput="onSsnChange()" onkeypress="return ssnCheck(event)" /></div>
             <div class="form-grid-pass">رمز عبور: </div>
-            <div class="form-grid-pass-input"><input type="text" name="uiPass" dir="ltr" /></div>
+            <div class="form-grid-pass-input"><input type="password" name="uiPass" dir="ltr" maxlength="24" onblur="passBlur()" /></div>
             <div class="form-grid-passr">تایید رمز عبور: </div>
-            <div class="form-grid-passr-input"><input type="text" name="uiPassr" dir="ltr" /></div>
+            <div class="form-grid-passr-input"><input type="password" name="uiPassr" dir="ltr" maxlength="24" onblur="rPassBlur()" /></div>
             <div class="form-grid-address"> آدرس: </div>
-            <div class="form-grid-address-input"><input type="text" name="uiAddress" /></div>
+            <div class="form-grid-address-input"><input type="text" name="uiAddress" onkeypress="return addressCheck(event)" maxlength="250" /></div>
             <div class="form-grid-birthdate">تاریخ تولد: </div>
-            <div class="form-grid-birthdate-input"><input type="text" name="uiBirthdate" dir="ltr" /></div>
+            <div class="form-grid-birthdate-input"><input type="text" name="uiBirthdate" dir="ltr" oninput="onBirthdateChange()" onkeypress="return birthdateCheck(event)" /></div>
             <div class="form-grid-marital">وضعیت تاهل:</div>
             <div class="form-grid-marital-option1">
-                <input type="radio" name="uiMaritalStatus" value=1> متاهل </input>
+                <input type="radio" name="uiMaritalStatus" value=1 required> متاهل </input>
             </div>
             <div class="form-grid-marital-option2">
                 <input type="radio" name="uiMaritalStatus" value=2> مجرد </input>
             </div>
             <div class="form-grid-fav">انتخاب علاقه‌مندی‌ها: </div>
             <div class="form-grid-fav-option1">
-                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                <label for="vehicle1">  هوش مصنوعی</label>
+                <input type="checkbox" name="ai" value="ai">
+                <label>  هوش مصنوعی</label>
             </div>
             <div class="form-grid-fav-option2">
-                <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-                <label for="vehicle2">  طراحی الگوریتم</label>
+                <input type="checkbox" name="al" value="al">
+                <label>  طراحی الگوریتم</label>
             </div>
             <div class="form-grid-fav-option3">
-                <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-                <label for="vehicle3">  شبکه</label>
+                <input type="checkbox" name="nt" value="nt">
+                <label>  شبکه</label>
             </div>
-
-                <div class="form-grid-submit"><input type="submit" name="uiSubmit" onclick="return formValidation()" value="ارسال" /></div>
-            </div>
+            <div class="form-grid-error"><p name="uiError"></p></div>
+            <div class="form-grid-submit"><input class="form-submit" type="submit" name="uiSubmit" onclick="return formValidation()" value="ارسال" /></div>
+        </div>
 </form>
 </body>
 </html>
